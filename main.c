@@ -15,16 +15,18 @@ int main() {
     // check status and do valid output
     switch (quadEquAnalysis(a, b, c, &x1, &x2, &cxa, &cxb)) {
         case TWO_REAL_ROOTS:
-            printf("Result: %.3lf, %.3lf" , x1, x2);
+            printf("Status: two real roots\nResult: %.3lf, %.3lf" , x1, x2);
             break;
         case ONE_MULT_ROOT:
-            printf("Result: %.3lf" , x1);
+            printf("Status: one multiple real root\nResult: %.3lf" , x1);
             break;
         case TWO_COMPLEX_ROOTS:
-            printf("Result: %.3lf+%.3lfi, %.3lf-%.3lfi", cxa, cxb, cxa, cxb);
+            printf("Status: two complex roots\n"
+                   "Result: %.3lf+%.3lfi, %.3lf-%.3lfi", cxa, cxb, cxa, cxb);
             break;
         case ONE_ROOT_LINEAR_EQUATION:
-            printf("Result: %.3lf" , x1);
+            printf("Status: it's linear equation, one real root\n"
+                   "Result: %.3lf" , x1);
             break;
         case NO_ROOTS:
             printf("Result: no roots");
