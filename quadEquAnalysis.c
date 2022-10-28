@@ -1,9 +1,10 @@
 //
-// Created by USER on 28.10.2022.
+// Analysis function
 //
 
 #include <math.h>
 
+// status enumerator for check all moments
 enum status {TWO_REAL_ROOTS, ONE_MULT_ROOT, TWO_COMPLEX_ROOTS,
     ONE_ROOT_LINEAR_EQUATION, NO_ROOTS, ANY_REAL_ROOT,
     INVALID_COEFFS};
@@ -12,7 +13,9 @@ enum status {TWO_REAL_ROOTS, ONE_MULT_ROOT, TWO_COMPLEX_ROOTS,
 enum status quadEquAnalysis(double a, double b, double c,
         double *x1, double *x2, double *cxa, double *cxb) {
     double d, sqrt_d;
-    d = b * b - 4 * a * c;
+    d = b * b - 4 * a * c; // discriminant
+
+    // count roots if it's possible
     if (isnan(a) || a == 0.0/0.0 ||
         isnan(b) || b == 0.0/0.0 ||
         isnan(c) || c == 0.0/0.0)

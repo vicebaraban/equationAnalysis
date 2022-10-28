@@ -1,10 +1,18 @@
+//
+// Created by vicebaraban
+//
+// Simple program for analysis quad equation (do all moments)
+//
+
 #include <stdio.h>
 #include "quadEquAnalysis.h"
 
 
 int main() {
     double a, b, c, x1, x2, cxa, cxb;
-    scanf("%lf%lf%lf",&a, &b, &c);
+    scanf("%lf%lf%lf",&a, &b, &c); // input equation coeffs
+
+    // check status and do valid output
     switch (quadEquAnalysis(a, b, c, &x1, &x2, &cxa, &cxb)) {
         case TWO_REAL_ROOTS:
             printf("Result: %.3lf, %.3lf" , x1, x2);
