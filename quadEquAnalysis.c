@@ -5,10 +5,6 @@
 #include <math.h>
 #include <stddef.h>
 #include "quadEquAnalysis.h"
-// status enumerator for check all moments
-//enum status {TWO_REAL_ROOTS, ONE_MULT_ROOT, TWO_COMPLEX_ROOTS,
-//    ONE_ROOT_LINEAR_EQUATION, NO_ROOTS, ANY_REAL_ROOT,
-//    INVALID_COEFFS};
 
 
 enum status quadEquAnalysis(double a, double b, double c,
